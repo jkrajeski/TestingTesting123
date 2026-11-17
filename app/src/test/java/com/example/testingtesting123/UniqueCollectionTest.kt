@@ -21,6 +21,14 @@ class UniqueCollectionTest {
         assert(item.name == "Apple") {"Item not added"}
     }
 
+    @Test
+    fun addAnItem2() {
+        collection.addItem(Item("Apple"))
+        collection.addItem(Item("Banana"))
+        val item = collection.get(1)
+        assert(item.name == "Banana") {"Item2 not added"}
+    }
+
     // TODO 2: Write a test to ensure that only unique items can be added to the collection
     // Uniqueness is determined by the Item.name property, which is set via the constructor
     @Test
